@@ -11,7 +11,7 @@ def attack(char_name, char_class):
     if char_class == 'healer':
         return (f'{char_name} нанёс урон противнику '
                 f'равный {5 + randint(-3, -1)}')
-    return ''
+    return (f'{char_name} не наносил урон противнику')
 
 
 def defence(char_name, char_class):
@@ -21,7 +21,7 @@ def defence(char_name, char_class):
         return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
     if char_class == 'healer':
         return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
-    return ''
+    return (f'{char_name} не блокировал урон')
 
 
 def special(char_name, char_class):
@@ -49,6 +49,7 @@ def start_training(char_name, char_class):
         'Введи одну из команд: attack — чтобы атаковать противника, '
         'defence — чтобы блокировать атаку противника или '
         'special — чтобы использовать свою суперсилу.'
+
         )
     print('Если не хочешь тренироваться, введи команду skip.')
     cmd = None
