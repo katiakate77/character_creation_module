@@ -59,7 +59,10 @@ def special(char_name: Optional[str] = None,
 
 def start_training(char_name: Optional[str] = None,
                    char_class: Optional[str] = None) -> str:
-    """Определяет тренировку в зависимости от названия персонажа."""
+    """
+    Принимает на вход имя и класс персонажа.
+    Возвращает сообщения о результатах цикла тренировки персонажа.
+    """
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     if char_class == 'mage':
@@ -84,7 +87,10 @@ def start_training(char_name: Optional[str] = None,
 
 
 def choice_char_class() -> Optional[str]:
-    """Выбрать название персонажа."""
+    """
+    Возвращает строку с выбранным
+    классом персонажа.
+    """
     approve_choice: Optional[str] = None
     char_class: Optional[str] = None
     while approve_choice != 'y':
